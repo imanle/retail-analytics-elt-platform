@@ -1,0 +1,61 @@
+product_id,product_name,category,subcategory,brand,cost_price,sale_price,is_active
+PROD00001,ReadMore Shoulder 270,Electronics,Laptops,UrbanGear,290.85,699.28,True
+PROD00002,TechPro Race 499,Clothing,Sportswear,SportMax,271.22,383.51,False
+PROD00003,PrimeTech Kitchen 258,Books,Technical,ReadMore,129.79,317.27,True
+PROD00004,PrimeTech House 614,Electronics,Laptops,HomePlus,225.65,287.55,True
+PROD00005,StyleCo Vote 791,Sports,Gym,ReadMore,256.15,330.2,True
+PROD00006,StyleCo Idea 529,Sports,Outdoor,EcoWear,175.78,220.02,False
+PROD00007,SportMax List 568,Clothing,Kids,EcoWear,75.41,129.29,False
+PROD00008,StyleCo True 175,Electronics,Laptops,ReadMore,140.19,350.19,True
+PROD00009,EcoWear Whose 391,Clothing,Kids,HomePlus,264.85,620.56,True
+PROD00010,TechPro What 783,Sports,Team Sports,SportMax,185.44,460.52,False
+PROD00011,HomePlus Huge 378,Electronics,Phones,SportMax,83.02,195.65,True
+PROD00012,PrimeTech How 357,Home & Garden,Decor,TechPro,207.81,479.79,True
+PROD00013,HomePlus Be 752,Books,Technical,SportMax,18.01,29.42,True
+PROD00014,HomePlus Result 658,Books,Children,TechPro,170.47,229.36,True
+PROD00015,EcoWear Recently 915,Sports,Outdoor,TechPro,131.79,165.31,True
+PROD00016,UrbanGear Two 735,Clothing,Women,HomePlus,201.75,334.86,False
+PROD00017,UrbanGear Notice 125,Clothing,Women,HomePlus,292.98,660.38,True
+PROD00018,ReadMore Cell 373,Home & Garden,Garden,HomePlus,241.66,561.44,True
+PROD00019,ReadMore Ready 304,Electronics,Accessories,PrimeTech,262.29,607.51,True
+PROD00020,EcoWear Trade 385,Clothing,Women,StyleCo,11.98,17.38,False
+PROD00021,EcoWear Happen 128,Home & Garden,Kitchen,StyleCo,194.24,334.01,True
+PROD00022,TechPro By 211,Home & Garden,Decor,UrbanGear,176.27,436.91,True
+PROD00023,UrbanGear Could 690,Home & Garden,Garden,ReadMore,183.83,342.82,True
+PROD00024,ReadMore Note 472,Books,Fiction,UrbanGear,158.38,356.11,True
+PROD00025,SportMax Increase 619,Home & Garden,Kitchen,SportMax,200.7,273.36,True
+PROD00026,ReadMore Newspaper 530,Home & Garden,Garden,UrbanGear,210.68,404.66,True
+PROD00027,SportMax Care 393,Clothing,Kids,ReadMore,124.79,285.0,True
+PROD00028,ReadMore Should 623,Sports,Team Sports,PrimeTech,142.17,252.32,True
+PROD00029,EcoWear Dog 195,Clothing,Men,ReadMore,88.72,183.03,True
+PROD00030,PrimeTech They 725,Clothing,Women,StyleCo,48.47,61.08,True
+PROD00031,UrbanGear About 349,Sports,Outdoor,HomePlus,216.91,368.57,True
+PROD00032,PrimeTech Something 151,Electronics,Laptops,ReadMore,234.63,348.31,False
+PROD00033,EcoWear Agency 873,Electronics,Accessories,PrimeTech,44.34,79.99,True
+PROD00034,HomePlus Fire 861,Sports,Water Sports,PrimeTech,250.02,478.1,True
+PROD00035,ReadMore Major 381,Clothing,Kids,PrimeTech,230.92,433.6,True
+PROD00036,StyleCo Report 241,Home & Garden,Decor,HomePlus,85.16,137.59,True
+PROD00037,PrimeTech Serve 525,Clothing,Women,TechPro,23.95,41.43,True
+PROD00038,TechPro Off 977,Books,Children,UrbanGear,271.93,532.79,True
+PROD00039,UrbanGear Language 651,Home & Garden,Kitchen,ReadMore,227.28,524.9,True
+PROD00040,UrbanGear Night 841,Home & Garden,Garden,HomePlus,148.26,252.86,True
+PROD00041,TechPro Hundred 185,Clothing,Men,UrbanGear,272.54,536.76,True
+PROD00042,ReadMore Than 565,Books,Non-Fiction,EcoWear,19.83,33.57,True
+PROD00043,SportMax Drug 954,Books,Technical,StyleCo,226.84,517.54,True
+PROD00044,StyleCo End 899,Sports,Gym,TechPro,299.97,496.43,True
+PROD00045,ReadMore Magazine 229,Clothing,Women,PrimeTech,252.57,507.09,True
+PROD00046,EcoWear Half 271,Sports,Outdoor,StyleCo,142.19,217.99,True
+PROD00047,SportMax Clear 689,Clothing,Kids,UrbanGear,36.89,45.5,True
+PROD00048,ReadMore Fact 204,Clothing,Men,SportMax,179.67,409.6,True
+PROD00049,TechPro Current 455,Sports,Gym,UrbanGear,239.89,464.36,True
+PROD00050,PrimeTech Write 208,Electronics,Tablets,UrbanGear,8.73,15.24,False
+PROD00051,SportMax Type 730,Books,Non-Fiction,PrimeTech,133.47,287.49,True
+PROD00052,StyleCo Share 385,Sports,Team Sports,PrimeTech,100.08,152.04,True
+PROD00053,EcoWear Southern 286,Books,Children,PrimeTech,104.24,192.07,True
+PROD00054,SportMax Budget 669,Home & Garden,Kitchen,TechPro,87.5,172.81,True
+PROD00055,ReadMore Almost 807,Clothing,Men,PrimeTech,76.2,131.7,True
+PROD00056,ReadMore Table 514,Books,Children,ReadMore,238.92,315.61,True
+PROD00057,UrbanGear Recent 863,Sports,Team Sports,EcoWear,144.61,273.34,True
+PROD00058,ReadMore Kind 423,Books,Technical,StyleCo,95.45,143.15,True
+PROD00059,SportMax Possible 202,Clothing,Women,ReadMore,68.83,125.92,True
+PROD00060,HomePlus Space 380,Home & Garden,Decor,TechPro,94.17,199.68,False
