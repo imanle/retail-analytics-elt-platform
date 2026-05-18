@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+
+.env
+
+.airflowignore
+
+postgres_data/
+
+venv/
+
+target/
+dbt_packages/
+
+logs/
+
+.DS_Store
