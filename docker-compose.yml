@@ -1,5 +1,25 @@
 version: '3.9'
 
+x-airflow-common: &airflow-common
+  image: apache/airflow:2.8.1
+  env_file:
+    - .env
+  environment:
+    AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: ${AIRFLOW__DATABASE__SQL_ALCHEMY_CONN}
+    PYTHONPATH: /opt/airflow/scripts
+    POSTGRES_HOST: postgres
+  volumes:
+    - ./airflow/dags:/opt/airflow/dags
+    - ./airflow/logs:/opt/airflow/logs
+    - ./airflow/plugins:/opt/airflow/plugins
+    - ./scripts:/opt/airflow/scripts
+    - ./raw_data:/opt/airflow/raw_data
+    - ./archive:/opt/airflow/archive
+  depends_on:
+    - postgres
+
 services:
 
   postgres:
@@ -15,35 +35,35 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
+  airflow-init:
+    <<: *airflow-common
+    container_name: airflow_init
+    command: >
+      bash -c "
+        airflow db init &&
+        airflow users create
+          --username admin
+          --password admin
+          --firstname Admin
+          --lastname User
+          --role Admin
+          --email admin@example.com
+      "
+    restart: on-failure
+
   airflow-webserver:
-    image: apache/airflow:2.8.1
+    <<: *airflow-common
     container_name: airflow_webserver
     restart: always
-    depends_on:
-      - postgres
-    env_file:
-      - .env
     ports:
       - "8080:8080"
     command: webserver
-    volumes:
-      - ./airflow/dags:/opt/airflow/dags
-      - ./airflow/logs:/opt/airflow/logs
-      - ./airflow/plugins:/opt/airflow/plugins
 
   airflow-scheduler:
-    image: apache/airflow:2.8.1
+    <<: *airflow-common
     container_name: airflow_scheduler
     restart: always
-    depends_on:
-      - postgres
-    env_file:
-      - .env
     command: scheduler
-    volumes:
-      - ./airflow/dags:/opt/airflow/dags
-      - ./airflow/logs:/opt/airflow/logs
-      - ./airflow/plugins:/opt/airflow/plugins
 
   metabase:
     image: metabase/metabase:latest
