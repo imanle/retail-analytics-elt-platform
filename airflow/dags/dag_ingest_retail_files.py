@@ -44,19 +44,12 @@ SOURCE_EXTENSIONS = {
     "payments": ".csv",
 }
 
-# ---------------------------------------------------------------------------
-# Default args
-# ---------------------------------------------------------------------------
 default_args = {
     "owner": "airflow",
     "retries": 1,
     "retry_delay": timedelta(minutes=5),
     "email_on_failure": False,
 }
-
-# ---------------------------------------------------------------------------
-# Task functions
-# ---------------------------------------------------------------------------
 
 def scan_raw_data_folders(**context):
     """
@@ -262,10 +255,6 @@ def _move_to_archive(file_path: str, archive_dir: str) -> None:
     shutil.move(file_path, dest)
     print(f"[archive] Moved to: {dest}")
 
-
-# ---------------------------------------------------------------------------
-# DAG definition
-# ---------------------------------------------------------------------------
 with DAG(
     dag_id="dag_ingest_retail_files",
     description="Scan, validate, and load raw retail files into PostgreSQL",
