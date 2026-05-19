@@ -1,0 +1,92 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: "Cleaned and deduplicated orders from raw.orders"
+    columns:
+      - name: order_id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        tests:
+          - not_null
+      - name: order_status
+        tests:
+          - accepted_values:
+              values: ['completed', 'cancelled', 'refunded', 'pending']
+      - name: total_amount
+        tests:
+          - not_null
+
+  - name: stg_order_items
+    description: "Cleaned and deduplicated order items from raw.order_items"
+    columns:
+      - name: order_item_id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+      - name: order_id
+        tests:
+          - not_null
+      - name: product_id
+        tests:
+          - not_null
+      - name: quantity
+        tests:
+          - not_null
+
+  - name: stg_customers
+    description: "Cleaned and deduplicated customers from raw.customers"
+    columns:
+      - name: customer_id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+      - name: email
+        tests:
+          - not_null
+
+  - name: stg_products
+    description: "Cleaned and deduplicated products from raw.products"
+    columns:
+      - name: product_id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_shipments
+    description: "Cleaned and deduplicated shipments from raw.shipments"
+    columns:
+      - name: shipment_id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+      - name: order_id
+        tests:
+          - not_null
+      - name: shipment_status
+        tests:
+          - accepted_values:
+              values: ['delivered', 'in_transit', 'pending', 'failed']
+
+  - name: stg_payments
+    description: "Cleaned and deduplicated payments from raw.payments"
+    columns:
+      - name: payment_id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+      - name: order_id
+        tests:
+          - not_null
+      - name: payment_status
+        tests:
+          - accepted_values:
+              values: ['paid', 'refunded', 'pending']

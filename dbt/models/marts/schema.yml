@@ -1,0 +1,81 @@
+version: 2
+
+models:
+  - name: fact_orders
+    description: "One row per order with payment, shipment, and item summary"
+    columns:
+      - name: order_id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        tests:
+          - not_null
+      - name: total_amount
+        tests:
+          - not_null
+      - name: order_status
+        tests:
+          - accepted_values:
+              values: ['completed', 'cancelled', 'refunded', 'pending']
+
+  - name: fact_order_items
+    description: "One row per order item with estimated profit"
+    columns:
+      - name: order_item_id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+      - name: order_id
+        tests:
+          - not_null
+      - name: product_id
+        tests:
+          - not_null
+
+  - name: fact_daily_sales
+    description: "Aggregated sales metrics per day"
+    columns:
+      - name: order_date
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+
+  - name: fact_customer_revenue
+    description: "Revenue and order stats per customer"
+    columns:
+      - name: customer_id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+
+  - name: fact_shipping_performance
+    description: "Shipment details with late delivery flag"
+    columns:
+      - name: shipment_id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_customers
+    description: "Customer dimension with segment and order history"
+    columns:
+      - name: customer_id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_products
+    description: "Product dimension with margin"
+    columns:
+      - name: product_id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
