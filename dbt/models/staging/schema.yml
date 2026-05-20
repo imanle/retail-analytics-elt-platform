@@ -73,7 +73,8 @@ models:
       - name: shipment_status
         tests:
           - accepted_values:
-              values: ['delivered', 'in_transit', 'pending', 'failed']
+                  config:
+                    values: ['completed', 'cancelled', 'refunded', 'pending']
 
   - name: stg_payments
     description: "Cleaned and deduplicated payments from raw.payments"
@@ -89,4 +90,5 @@ models:
       - name: payment_status
         tests:
           - accepted_values:
-              values: ['paid', 'refunded', 'pending']
+                  config:
+                    values: ['completed', 'cancelled', 'refunded', 'pending']

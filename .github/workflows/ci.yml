@@ -88,10 +88,10 @@ jobs:
         working-directory: dbt
         env:
           POSTGRES_HOST: localhost
-          POSTGRES_USER: admin
-          POSTGRES_PASSWORD: dummy
-          POSTGRES_DB: retail_warehouse
-        run: dbt compile --profiles-dir .
+          POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
+          POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+          POSTGRES_DB: ${{ secrets.POSTGRES_DB }}
+        run: dbt compile --profiles-dir . --no-partial-parse
 
   # -------------------------------------------------------------------
   # Job 4: Docker Compose validation
