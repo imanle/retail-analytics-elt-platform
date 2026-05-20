@@ -91,7 +91,7 @@ jobs:
           POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
           POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
           POSTGRES_DB: ${{ secrets.POSTGRES_DB }}
-        run: dbt compile --profiles-dir . --no-partial-parse
+        run: dbt parse --profiles-dir .
 
   # -------------------------------------------------------------------
   # Job 4: Docker Compose validation

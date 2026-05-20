@@ -6,17 +6,17 @@ models:
     columns:
       - name: order_id
         description: "Primary key"
-        tests:
+        data_tests:
           - unique
           - not_null
       - name: customer_id
-        tests:
+        data_tests:
           - not_null
       - name: total_amount
-        tests:
+        data_tests:
           - not_null
       - name: order_status
-        tests:
+        data_tests:
           - accepted_values:
                   config:
                     values: ['completed', 'cancelled', 'refunded', 'pending']
@@ -26,14 +26,14 @@ models:
     columns:
       - name: order_item_id
         description: "Primary key"
-        tests:
+        data_tests:
           - unique
           - not_null
       - name: order_id
-        tests:
+        data_tests:
           - not_null
       - name: product_id
-        tests:
+        data_tests:
           - not_null
 
   - name: fact_daily_sales
@@ -41,7 +41,7 @@ models:
     columns:
       - name: order_date
         description: "Primary key"
-        tests:
+        data_tests:
           - unique
           - not_null
 
@@ -50,7 +50,7 @@ models:
     columns:
       - name: customer_id
         description: "Primary key"
-        tests:
+        data_tests:
           - unique
           - not_null
 
@@ -59,7 +59,7 @@ models:
     columns:
       - name: shipment_id
         description: "Primary key"
-        tests:
+        data_tests:
           - unique
           - not_null
 
@@ -68,7 +68,7 @@ models:
     columns:
       - name: customer_id
         description: "Primary key"
-        tests:
+        data_tests:
           - unique
           - not_null
 
@@ -77,6 +77,6 @@ models:
     columns:
       - name: product_id
         description: "Primary key"
-        tests:
+        data_tests:
           - unique
           - not_null
