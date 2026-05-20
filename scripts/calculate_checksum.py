@@ -37,6 +37,7 @@ def checksums_match(file_path: str, expected_checksum: str) -> bool:
 
 if __name__ == "__main__":
     import sys
+
     if len(sys.argv) < 2:
         print("Usage: python3 calculate_checksum.py <file_path>")
         sys.exit(1)

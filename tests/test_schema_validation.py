@@ -37,6 +37,7 @@ def _write_parquet(columns: list) -> str:
 # Tests — orders CSV
 # ---------------------------------------------------------------------------
 
+
 def test_valid_orders_file_passes():
     path = _write_csv(REQUIRED_COLUMNS["orders"])
     try:
@@ -73,6 +74,7 @@ def test_extra_columns_do_not_break_validation():
 # Tests — order_items Parquet
 # ---------------------------------------------------------------------------
 
+
 def test_valid_order_items_parquet_passes():
     path = _write_parquet(REQUIRED_COLUMNS["order_items"])
     try:
@@ -96,6 +98,7 @@ def test_order_items_missing_product_id_fails():
 # ---------------------------------------------------------------------------
 # Tests — error cases
 # ---------------------------------------------------------------------------
+
 
 def test_unsupported_file_type_fails():
     f = tempfile.NamedTemporaryFile(delete=False, suffix=".json")
@@ -138,6 +141,7 @@ def test_empty_file_fails():
 # ---------------------------------------------------------------------------
 # Tests — all source types have required columns defined
 # ---------------------------------------------------------------------------
+
 
 @pytest.mark.parametrize("source_name", list(REQUIRED_COLUMNS.keys()))
 def test_all_sources_have_required_columns_defined(source_name):

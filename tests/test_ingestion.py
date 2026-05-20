@@ -21,12 +21,14 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
 # Helpers
 # ---------------------------------------------------------------------------
 
+
 def _make_sqlite_engine():
     """
     SQLite engine for testing without PostgreSQL.
     Uses a temp file so we can attach a 'raw' schema.
     """
     import tempfile
+
     db_file = tempfile.mktemp(suffix=".db")
     raw_file = tempfile.mktemp(suffix="_raw.db")
     engine = create_engine(f"sqlite:///{db_file}")
@@ -37,31 +39,35 @@ def _make_sqlite_engine():
 
 
 def _write_orders_csv(path: str, n_rows: int = 5) -> int:
-    df = pd.DataFrame({
-        "order_id": [f"ORD{i:03d}" for i in range(n_rows)],
-        "customer_id": [f"CUST{i:03d}" for i in range(n_rows)],
-        "order_date": ["2026-05-01"] * n_rows,
-        "order_status": ["completed"] * n_rows,
-        "currency": ["USD"] * n_rows,
-        "total_amount": [100.0] * n_rows,
-        "created_at": ["2026-05-01T00:00:00"] * n_rows,
-        "updated_at": ["2026-05-01T00:00:00"] * n_rows,
-    })
+    df = pd.DataFrame(
+        {
+            "order_id": [f"ORD{i:03d}" for i in range(n_rows)],
+            "customer_id": [f"CUST{i:03d}" for i in range(n_rows)],
+            "order_date": ["2026-05-01"] * n_rows,
+            "order_status": ["completed"] * n_rows,
+            "currency": ["USD"] * n_rows,
+            "total_amount": [100.0] * n_rows,
+            "created_at": ["2026-05-01T00:00:00"] * n_rows,
+            "updated_at": ["2026-05-01T00:00:00"] * n_rows,
+        }
+    )
     df.to_csv(path, index=False)
     return n_rows
 
 
 def _write_order_items_parquet(path: str, n_rows: int = 5) -> int:
-    df = pd.DataFrame({
-        "order_item_id": [f"ITEM{i:04d}" for i in range(n_rows)],
-        "order_id": [f"ORD{i:03d}" for i in range(n_rows)],
-        "product_id": [f"PROD{i:03d}" for i in range(n_rows)],
-        "quantity": [1] * n_rows,
-        "unit_price": [50.0] * n_rows,
-        "discount_amount": [0.0] * n_rows,
-        "tax_amount": [4.0] * n_rows,
-        "line_total": [54.0] * n_rows,
-    })
+    df = pd.DataFrame(
+        {
+            "order_item_id": [f"ITEM{i:04d}" for i in range(n_rows)],
+            "order_id": [f"ORD{i:03d}" for i in range(n_rows)],
+            "product_id": [f"PROD{i:03d}" for i in range(n_rows)],
+            "quantity": [1] * n_rows,
+            "unit_price": [50.0] * n_rows,
+            "discount_amount": [0.0] * n_rows,
+            "tax_amount": [4.0] * n_rows,
+            "line_total": [54.0] * n_rows,
+        }
+    )
     df.to_parquet(path, index=False)
     return n_rows
 
@@ -69,6 +75,7 @@ def _write_order_items_parquet(path: str, n_rows: int = 5) -> int:
 # ---------------------------------------------------------------------------
 # Tests — ingest_csv
 # ---------------------------------------------------------------------------
+
 
 def test_csv_file_loads_successfully():
     import ingest_csv
@@ -150,6 +157,7 @@ def test_csv_metadata_columns_are_added():
 # ---------------------------------------------------------------------------
 # Tests — ingest_parquet
 # ---------------------------------------------------------------------------
+
 
 def test_parquet_file_loads_successfully():
     import ingest_parquet

@@ -83,6 +83,7 @@ def ingest_parquet(
 if __name__ == "__main__":
     import sys
     from dotenv import load_dotenv
+
     load_dotenv()
 
     if len(sys.argv) < 3:

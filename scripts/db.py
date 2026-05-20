@@ -39,5 +39,6 @@ def test_connection() -> bool:
 
 if __name__ == "__main__":
     from dotenv import load_dotenv
+
     load_dotenv()
     test_connection()

@@ -42,7 +42,13 @@ ITEMS_PER_ORDER_MAX = 5
 ORDER_STATUSES = ["completed", "cancelled", "refunded", "pending"]
 ORDER_STATUS_WEIGHTS = [0.65, 0.15, 0.10, 0.10]
 
-PAYMENT_METHODS = ["credit_card", "paypal", "bank_transfer", "cash_on_delivery", "gift_card"]
+PAYMENT_METHODS = [
+    "credit_card",
+    "paypal",
+    "bank_transfer",
+    "cash_on_delivery",
+    "gift_card",
+]
 PAYMENT_STATUS_MAP = {
     "completed": "paid",
     "cancelled": "refunded",
@@ -62,29 +68,52 @@ CATEGORIES = {
     "Sports": ["Gym", "Outdoor", "Team Sports", "Water Sports"],
 }
 
-BRANDS = ["TechPro", "StyleCo", "HomePlus", "ReadMore", "SportMax", "EcoWear", "UrbanGear", "PrimeTech"]
+BRANDS = [
+    "TechPro",
+    "StyleCo",
+    "HomePlus",
+    "ReadMore",
+    "SportMax",
+    "EcoWear",
+    "UrbanGear",
+    "PrimeTech",
+]
 
 CURRENCIES = ["USD", "EUR", "GBP"]
-COUNTRIES = ["United States", "Germany", "United Kingdom", "France", "Canada", "Australia", "Netherlands", "Spain"]
+COUNTRIES = [
+    "United States",
+    "Germany",
+    "United Kingdom",
+    "France",
+    "Canada",
+    "Australia",
+    "Netherlands",
+    "Spain",
+]
 
 
 # ---------------------------------------------------------------------------
 # Generators
 # ---------------------------------------------------------------------------
 
+
 def generate_customers(n: int) -> pd.DataFrame:
     rows = []
     for i in range(1, n + 1):
         country = random.choice(COUNTRIES)
-        rows.append({
-            "customer_id": f"CUST{i:05d}",
-            "first_name": fake.first_name(),
-            "last_name": fake.last_name(),
-            "email": fake.unique.email(),
-            "country": country,
-            "city": fake.city(),
-            "created_at": fake.date_time_between(start_date="-3y", end_date="-30d").isoformat(),
-        })
+        rows.append(
+            {
+                "customer_id": f"CUST{i:05d}",
+                "first_name": fake.first_name(),
+                "last_name": fake.last_name(),
+                "email": fake.unique.email(),
+                "country": country,
+                "city": fake.city(),
+                "created_at": fake.date_time_between(
+                    start_date="-3y", end_date="-30d"
+                ).isoformat(),
+            }
+        )
     return pd.DataFrame(rows)
 
 
@@ -95,16 +124,18 @@ def generate_products(n: int) -> pd.DataFrame:
         subcategory = random.choice(CATEGORIES[category])
         cost = round(random.uniform(5, 300), 2)
         sale = round(cost * random.uniform(1.2, 2.5), 2)
-        rows.append({
-            "product_id": f"PROD{i:05d}",
-            "product_name": f"{random.choice(BRANDS)} {fake.word().capitalize()} {random.randint(100, 999)}",
-            "category": category,
-            "subcategory": subcategory,
-            "brand": random.choice(BRANDS),
-            "cost_price": cost,
-            "sale_price": sale,
-            "is_active": random.choices([True, False], weights=[0.9, 0.1])[0],
-        })
+        rows.append(
+            {
+                "product_id": f"PROD{i:05d}",
+                "product_name": f"{random.choice(BRANDS)} {fake.word().capitalize()} {random.randint(100, 999)}",
+                "category": category,
+                "subcategory": subcategory,
+                "brand": random.choice(BRANDS),
+                "cost_price": cost,
+                "sale_price": sale,
+                "is_active": random.choices([True, False], weights=[0.9, 0.1])[0],
+            }
+        )
     return pd.DataFrame(rows)
 
 
@@ -122,16 +153,18 @@ def generate_orders_for_day(
         created_dt = datetime.combine(order_date, datetime.min.time()) + timedelta(
             seconds=random.randint(0, 86399)
         )
-        rows.append({
-            "order_id": order_id,
-            "customer_id": random.choice(customer_ids),
-            "order_date": str(order_date),
-            "order_status": status,
-            "currency": currency,
-            "total_amount": 0.0,  # will be filled after items are created
-            "created_at": created_dt.isoformat(),
-            "updated_at": created_dt.isoformat(),
-        })
+        rows.append(
+            {
+                "order_id": order_id,
+                "customer_id": random.choice(customer_ids),
+                "order_date": str(order_date),
+                "order_status": status,
+                "currency": currency,
+                "total_amount": 0.0,  # will be filled after items are created
+                "created_at": created_dt.isoformat(),
+                "updated_at": created_dt.isoformat(),
+            }
+        )
     return pd.DataFrame(rows)
 
 
@@ -157,16 +190,18 @@ def generate_order_items_for_orders(
             tax = round((unit_price - discount) * qty * 0.08, 2)
             line_total = round((unit_price - discount) * qty + tax, 2)
             order_total += line_total
-            rows.append({
-                "order_item_id": f"ITEM{seq:08d}",
-                "order_id": order["order_id"],
-                "product_id": product_id,
-                "quantity": qty,
-                "unit_price": unit_price,
-                "discount_amount": discount,
-                "tax_amount": tax,
-                "line_total": line_total,
-            })
+            rows.append(
+                {
+                    "order_item_id": f"ITEM{seq:08d}",
+                    "order_id": order["order_id"],
+                    "product_id": product_id,
+                    "quantity": qty,
+                    "unit_price": unit_price,
+                    "discount_amount": discount,
+                    "tax_amount": tax,
+                    "line_total": line_total,
+                }
+            )
             seq += 1
         order_totals[order["order_id"]] = round(order_total, 2)
 
@@ -190,21 +225,31 @@ def generate_shipments_for_orders(
         shipped_dt = datetime.combine(order_date, datetime.min.time()) + timedelta(
             hours=random.randint(2, 24)
         )
-        delivery_days = {"standard": random.randint(3, 7), "express": random.randint(1, 3), "overnight": 1}[method]
-        delivered_dt = shipped_dt + timedelta(days=delivery_days, hours=random.randint(0, 8))
+        delivery_days = {
+            "standard": random.randint(3, 7),
+            "express": random.randint(1, 3),
+            "overnight": 1,
+        }[method]
+        delivered_dt = shipped_dt + timedelta(
+            days=delivery_days, hours=random.randint(0, 8)
+        )
         # Some shipments are still in transit (delivered_at is None)
         is_delivered = random.random() > 0.15
-        status = "delivered" if is_delivered else random.choice(["in_transit", "pending"])
-        rows.append({
-            "shipment_id": f"SHIP{seq:07d}",
-            "order_id": order["order_id"],
-            "carrier": carrier,
-            "shipping_method": method,
-            "shipping_cost": shipping_cost,
-            "shipped_at": shipped_dt.isoformat(),
-            "delivered_at": delivered_dt.isoformat() if is_delivered else None,
-            "shipment_status": status,
-        })
+        status = (
+            "delivered" if is_delivered else random.choice(["in_transit", "pending"])
+        )
+        rows.append(
+            {
+                "shipment_id": f"SHIP{seq:07d}",
+                "order_id": order["order_id"],
+                "carrier": carrier,
+                "shipping_method": method,
+                "shipping_cost": shipping_cost,
+                "shipped_at": shipped_dt.isoformat(),
+                "delivered_at": delivered_dt.isoformat() if is_delivered else None,
+                "shipment_status": status,
+            }
+        )
         seq += 1
     return pd.DataFrame(rows)
 
@@ -225,14 +270,16 @@ def generate_payments_for_orders(
         paid_dt = datetime.combine(order_date, datetime.min.time()) + timedelta(
             hours=random.randint(0, 23), minutes=random.randint(0, 59)
         )
-        rows.append({
-            "payment_id": f"PAY{seq:08d}",
-            "order_id": order["order_id"],
-            "payment_method": method,
-            "payment_status": status,
-            "payment_amount": order_totals.get(order["order_id"], 0.0),
-            "paid_at": paid_dt.isoformat(),
-        })
+        rows.append(
+            {
+                "payment_id": f"PAY{seq:08d}",
+                "order_id": order["order_id"],
+                "payment_method": method,
+                "payment_status": status,
+                "payment_amount": order_totals.get(order["order_id"], 0.0),
+                "paid_at": paid_dt.isoformat(),
+            }
+        )
         seq += 1
     return pd.DataFrame(rows)
 
@@ -240,6 +287,7 @@ def generate_payments_for_orders(
 # ---------------------------------------------------------------------------
 # File writers
 # ---------------------------------------------------------------------------
+
 
 def save_csv(df: pd.DataFrame, path: str) -> None:
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -256,6 +304,7 @@ def save_parquet(df: pd.DataFrame, path: str) -> None:
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
+
 
 def main(start_date: date, n_days: int) -> None:
     print("=" * 60)
@@ -274,7 +323,9 @@ def main(start_date: date, n_days: int) -> None:
     product_ids = products_df["product_id"].tolist()
 
     # Daily transactional data
-    print(f"\n[2/3] Generating {n_days} day(s) of transactional data starting {start_date}...")
+    print(
+        f"\n[2/3] Generating {n_days} day(s) of transactional data starting {start_date}..."
+    )
 
     order_seq = 1
     item_seq = 1
@@ -298,13 +349,28 @@ def main(start_date: date, n_days: int) -> None:
         orders_df["total_amount"] = orders_df["order_id"].map(order_totals)
 
         shipments_df = generate_shipments_for_orders(orders_df, current_date, ship_seq)
-        payments_df = generate_payments_for_orders(orders_df, order_totals, current_date, pay_seq)
+        payments_df = generate_payments_for_orders(
+            orders_df, order_totals, current_date, pay_seq
+        )
 
         # Save daily files
-        save_csv(orders_df, os.path.join(RAW_DATA_DIR, "orders", f"orders_{date_str}.csv"))
-        save_parquet(items_df, os.path.join(RAW_DATA_DIR, "order_items", f"order_items_{date_str}.parquet"))
-        save_csv(shipments_df, os.path.join(RAW_DATA_DIR, "shipments", f"shipments_{date_str}.csv"))
-        save_csv(payments_df, os.path.join(RAW_DATA_DIR, "payments", f"payments_{date_str}.csv"))
+        save_csv(
+            orders_df, os.path.join(RAW_DATA_DIR, "orders", f"orders_{date_str}.csv")
+        )
+        save_parquet(
+            items_df,
+            os.path.join(
+                RAW_DATA_DIR, "order_items", f"order_items_{date_str}.parquet"
+            ),
+        )
+        save_csv(
+            shipments_df,
+            os.path.join(RAW_DATA_DIR, "shipments", f"shipments_{date_str}.csv"),
+        )
+        save_csv(
+            payments_df,
+            os.path.join(RAW_DATA_DIR, "payments", f"payments_{date_str}.csv"),
+        )
 
         order_seq += len(orders_df)
         item_seq += len(items_df)

@@ -25,6 +25,7 @@ def _write_temp_file(content: bytes) -> str:
 # Tests
 # ---------------------------------------------------------------------------
 
+
 def test_same_file_returns_same_checksum():
     path = _write_temp_file(b"order_id,customer_id\nORD001,CUST001\n")
     try:

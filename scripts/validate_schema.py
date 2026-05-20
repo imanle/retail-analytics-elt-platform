@@ -82,6 +82,7 @@ def _read_file_columns(file_path: str) -> list:
         df = pd.read_csv(file_path, nrows=0)
     elif ext == ".parquet":
         import pyarrow.parquet as pq
+
         schema = pq.read_schema(file_path)
         return schema.names
     else:
@@ -120,12 +121,16 @@ def validate_schema(file_path: str, source_name: str) -> dict:
     # Check file type
     ext = os.path.splitext(file_path)[1].lower()
     if ext not in SUPPORTED_EXTENSIONS:
-        result["error"] = f"Unsupported file type '{ext}'. Supported: {SUPPORTED_EXTENSIONS}"
+        result["error"] = (
+            f"Unsupported file type '{ext}'. Supported: {SUPPORTED_EXTENSIONS}"
+        )
         return result
 
     # Check source_name is known
     if source_name not in REQUIRED_COLUMNS:
-        result["error"] = f"Unknown source name '{source_name}'. Known: {list(REQUIRED_COLUMNS.keys())}"
+        result["error"] = (
+            f"Unknown source name '{source_name}'. Known: {list(REQUIRED_COLUMNS.keys())}"
+        )
         return result
 
     # Check file is not empty
@@ -157,6 +162,7 @@ def validate_schema(file_path: str, source_name: str) -> dict:
 
 if __name__ == "__main__":
     import sys
+
     if len(sys.argv) < 3:
         print("Usage: python3 validate_schema.py <file_path> <source_name>")
         print(f"Known sources: {list(REQUIRED_COLUMNS.keys())}")
