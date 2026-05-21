@@ -70,9 +70,8 @@ Late shipment SLAs:
 |---|---|---|
 | Files Ingested Today | Single number | Files loaded today |
 | Failed Files | Single number | Files with failed status |
-| Files Ingested by Day | Bar chart | Daily ingestion history |
 | Rows Loaded by Source | Bar chart | Total rows per source type |
 | Quality Checks by Status | Pie chart | passed / failed / warning |
-| Failed Ingestion Runs | Table | Failed runs with error messages |
+| Ingestion Runs | Table | All runs |
 
 This dashboard is important because it shows data engineering maturity — the platform monitors itself, not just the business data.
