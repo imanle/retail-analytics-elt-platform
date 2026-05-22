@@ -222,7 +222,6 @@ Every push to `main` runs four automated checks:
 ## Future Improvements
 
 - Add MinIO to simulate S3 file storage
-- Add the dbt transformation DAG to Airflow
 - Add Kafka or Redpanda for streaming ingestion
 - Add Great Expectations for advanced data validation
 - Add Slack alerting on failed DAG runs
