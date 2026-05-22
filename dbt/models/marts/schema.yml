@@ -18,8 +18,7 @@ models:
       - name: order_status
         data_tests:
           - accepted_values:
-                  config:
-                    values: ['completed', 'cancelled', 'refunded', 'pending']
+                  values: ['completed', 'cancelled', 'refunded', 'pending']
 
   - name: fact_order_items
     description: "One row per order item with estimated profit"

@@ -17,6 +17,8 @@ x-airflow-common: &airflow-common
     - ./scripts:/opt/airflow/scripts
     - ./raw_data:/opt/airflow/raw_data
     - ./archive:/opt/airflow/archive
+    - ./dbt:/opt/airflow/dbt
+    - ./airflow/requirements.txt:/requirements.txt
   depends_on:
     - postgres
 
