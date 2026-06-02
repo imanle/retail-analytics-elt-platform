@@ -32,17 +32,6 @@ default_args = {
 }
 
 # ---------------------------------------------------------------------------
-# Shared env vars passed to every dbt command
-# These are read from Airflow's environment (set via docker-compose env_file)
-# ---------------------------------------------------------------------------
-DBT_ENV = {
-    "POSTGRES_HOST": "postgres",
-    "POSTGRES_USER": "{{ env_var('POSTGRES_USER') }}",
-    "POSTGRES_PASSWORD": "{{ env_var('POSTGRES_PASSWORD') }}",
-    "POSTGRES_DB": "{{ env_var('POSTGRES_DB') }}",
-}
-
-# ---------------------------------------------------------------------------
 # DAG definition
 # ---------------------------------------------------------------------------
 with DAG(
@@ -56,26 +45,6 @@ with DAG(
 ) as dag:
 
     start = EmptyOperator(task_id="start")
-
-    dbt_debug = BashOperator(
-        task_id="dbt_debug",
-        bash_command=f"cd {DBT_PROJECT_DIR} && dbt debug --profiles-dir {DBT_PROFILES_DIR}",
-        env={
-            "POSTGRES_HOST": "postgres",
-            "PATH": "/home/airflow/.local/bin:/usr/local/bin:/usr/bin:/bin",
-        },
-        append_env=True,
-    )
-
-    dbt_deps = BashOperator(
-        task_id="dbt_deps",
-        bash_command=f"cd {DBT_PROJECT_DIR} && dbt deps --profiles-dir {DBT_PROFILES_DIR}",
-        env={
-            "POSTGRES_HOST": "postgres",
-            "PATH": "/home/airflow/.local/bin:/usr/local/bin:/usr/bin:/bin",
-        },
-        append_env=True,
-    )
 
     dbt_run_staging = BashOperator(
         task_id="dbt_run_staging",
@@ -109,4 +78,4 @@ with DAG(
 
     end = EmptyOperator(task_id="end")
 
-    start >> dbt_debug >> dbt_deps >> dbt_run_staging >> dbt_run_marts >> dbt_test >> end
+    start >> dbt_run_staging >> dbt_run_marts >> dbt_test >> end

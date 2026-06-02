@@ -1,0 +1,201 @@
+customer_id,first_name,last_name,email,country,city,created_at
+CUST00001,Danielle,Johnson,john21@example.net,Germany,New Roberttown,2023-09-11T04:48:05.784586
+CUST00002,Jesse,Guzman,jennifermiles@example.com,United States,South Bridget,2025-10-12T23:21:41.951516
+CUST00003,Adam,Shaffer,jpeterson@example.org,Canada,Curtisfurt,2023-09-14T10:04:26.663078
+CUST00004,Melanie,Munoz,blairamanda@example.com,France,New Kellystad,2025-02-07T15:25:46.920198
+CUST00005,Janet,Williams,kendragalloway@example.org,France,South Joshuastad,2023-11-23T16:34:53.789990
+CUST00006,Michael,Santiago,lynchgeorge@example.net,United Kingdom,East Steven,2024-03-17T00:51:48.143791
+CUST00007,Sara,Watts,gabriellecameron@example.org,Germany,Port Antonio,2024-05-04T12:45:47.373418
+CUST00008,Joseph,Clark,jason76@example.net,Germany,Thomasberg,2024-02-21T04:23:34.951968
+CUST00009,Anna,Baker,zhurst@example.com,Netherlands,East William,2023-09-08T05:32:51.763296
+CUST00010,Brandon,Rodriguez,laurahenderson@example.org,United States,Jamesmouth,2024-12-18T05:38:16.723822
+CUST00011,Tasha,Valencia,frazierdanny@example.net,United States,Kaylamouth,2023-09-30T05:32:00.243213
+CUST00012,Ryan,Chavez,teresa28@example.org,Germany,Meaganhaven,2025-03-13T08:08:01.794608
+CUST00013,Eric,Farmer,georgetracy@example.org,France,Natashaport,2024-02-13T12:52:15.637388
+CUST00014,John,Bradley,millertodd@example.org,France,East Donna,2026-03-08T10:08:45.674402
+CUST00015,Frederick,Rose,ibrandt@example.net,United States,Lake Larry,2026-04-28T21:32:45.453688
+CUST00016,Debra,Kim,omartinez@example.org,France,Andrewside,2024-02-03T14:02:28.211892
+CUST00017,Jeffrey,Jones,perezrebecca@example.com,Netherlands,New Johnfort,2024-01-17T15:55:37.310311
+CUST00018,David,Walls,esanchez@example.com,France,North Collin,2024-09-04T17:26:56.432260
+CUST00019,Rodney,Owens,nuneztracey@example.org,Spain,South Jessicaville,2024-02-23T08:17:05.635230
+CUST00020,James,West,dwhite@example.org,Canada,South Lindseyside,2023-09-15T16:34:16.240362
+CUST00021,Denise,Fernandez,novaksara@example.org,United States,South Todd,2024-01-17T03:24:24.275100
+CUST00022,Richard,Brown,ysmith@example.com,United Kingdom,Mitchellside,2025-05-08T17:12:00.331034
+CUST00023,Tommy,Lee,tanyariley@example.net,Netherlands,Lake Leeton,2025-02-14T22:00:22.051533
+CUST00024,Wesley,Farrell,brianromero@example.org,Australia,New Carlosbury,2024-08-06T15:48:45.199599
+CUST00025,Shelly,Hudson,harveyrobert@example.net,Canada,Sarahborough,2025-05-17T02:06:03.607859
+CUST00026,Leon,Baker,emilyevans@example.com,United Kingdom,North Stephenshire,2026-04-29T21:46:11.913662
+CUST00027,Charles,Lewis,david51@example.org,France,Justinmouth,2025-11-07T21:15:37.352275
+CUST00028,Jade,Carr,contrerasangela@example.net,Australia,East Josephville,2025-08-02T13:19:53.850273
+CUST00029,Eric,Campbell,jenniferharris@example.net,Germany,Williamview,2026-01-23T04:22:37.735592
+CUST00030,Meghan,Davis,ccalderon@example.org,Germany,Kellieview,2023-11-22T13:09:34.820398
+CUST00031,Scott,Thornton,rodriguezsierra@example.net,Netherlands,New Barry,2024-06-30T19:52:22.218838
+CUST00032,Angela,Jordan,parkerrachel@example.org,Germany,Jasonbury,2025-05-14T02:40:29.306649
+CUST00033,Michael,Castro,vdickson@example.org,Australia,Port Francisco,2025-10-02T19:16:00.316269
+CUST00034,Gregory,Gutierrez,jillcook@example.com,Australia,West Erik,2025-06-19T17:07:14.873410
+CUST00035,Patrick,Williams,dwalker@example.com,Canada,Loribury,2024-01-26T22:06:36.747714
+CUST00036,Donna,Ross,michelle45@example.net,United States,Frazierside,2024-05-21T06:14:42.444619
+CUST00037,Anthony,Wiley,gregory40@example.org,Spain,Reedmouth,2024-09-10T10:06:02.808966
+CUST00038,Tracey,Wilson,jonathanfletcher@example.org,Germany,West Ryan,2026-03-10T13:57:38.285160
+CUST00039,Samantha,Hanson,cortezkevin@example.com,Netherlands,Nguyenport,2025-01-14T04:41:43.436399
+CUST00040,James,Ortega,lbyrd@example.net,Germany,Richardtown,2024-04-22T04:37:36.784721
+CUST00041,Jason,Floyd,steven73@example.net,Canada,Leonburgh,2025-05-05T11:56:31.938920
+CUST00042,Justin,Beck,clarence34@example.org,Australia,East Andrew,2024-02-19T06:44:18.700896
+CUST00043,Thomas,Atkinson,gibsonolivia@example.net,France,Lake Heather,2024-11-11T05:09:19.798594
+CUST00044,John,Douglas,staffordmichelle@example.org,Germany,Robinsonhaven,2024-10-10T10:15:16.898204
+CUST00045,Angela,Lowery,bryantlaurie@example.net,United States,Stephaniemouth,2025-03-17T06:18:44.006941
+CUST00046,Jennifer,Wagner,vmerritt@example.com,France,Greenbury,2025-11-14T09:44:25.678189
+CUST00047,Joshua,Strickland,rsims@example.com,Canada,Lake Justinview,2024-05-26T06:23:55.333305
+CUST00048,Patricia,Miller,jessebenson@example.net,Germany,North Robert,2024-05-20T23:22:41.547334
+CUST00049,Steven,Brown,xprice@example.net,France,Port Nicoleshire,2024-07-12T17:26:39.500860
+CUST00050,Adam,Bell,acastaneda@example.net,Germany,South Jeffrey,2024-09-09T19:49:51.656305
+CUST00051,Anthony,Rogers,dramsey@example.org,Netherlands,South Brittanytown,2023-08-31T19:28:47.882025
+CUST00052,Roy,Camacho,brentgray@example.org,Canada,Murphyfurt,2024-03-25T21:22:46.532166
+CUST00053,Stephanie,Fisher,ruizkaitlyn@example.org,Spain,Jeffreyland,2025-09-12T22:08:55.238546
+CUST00054,Denise,Webster,jamessmith@example.org,Australia,East Thomas,2023-10-03T06:06:11.211858
+CUST00055,Stacie,Marshall,katie29@example.net,United Kingdom,Port Loriport,2023-09-26T13:12:15.155513
+CUST00056,Anthony,Collins,tsanders@example.org,Australia,New Hannahbury,2023-09-19T22:41:25.598326
+CUST00057,Kendra,Jefferson,hoganashlee@example.org,Australia,Amandastad,2023-08-15T20:03:28.728257
+CUST00058,Deborah,Smith,gshort@example.com,France,Cynthiamouth,2025-06-26T03:21:48.415366
+CUST00059,Ryan,Gross,christina87@example.com,Canada,Petersenshire,2024-03-15T09:09:36.178768
+CUST00060,Melissa,Rivas,ramirezshannon@example.com,Germany,Rogersfort,2025-11-26T05:23:28.260169
+CUST00061,Hunter,Lewis,matthew94@example.net,United Kingdom,New Stacyland,2024-02-15T13:33:48.608274
+CUST00062,Richard,Peters,hannahbrewer@example.com,France,Mcguireland,2024-04-11T22:04:41.057830
+CUST00063,Richard,Sanchez,thomas85@example.com,United Kingdom,Michaelmouth,2024-03-18T01:38:15.113731
+CUST00064,John,Martinez,leslienewton@example.net,Spain,East Javier,2024-10-31T08:48:54.226678
+CUST00065,Jenny,Bray,tina34@example.org,Netherlands,Harrytown,2025-06-26T21:31:09.395145
+CUST00066,David,Williams,tranheidi@example.org,Canada,Garciatown,2025-02-04T03:20:00.620111
+CUST00067,Taylor,Alexander,tammyking@example.com,France,Port Cameronfort,2023-08-21T07:09:09.481890
+CUST00068,Crystal,Brown,lisaavery@example.org,Australia,North Angela,2024-08-19T20:55:54.107617
+CUST00069,Caitlin,Montgomery,chayes@example.com,United States,Torreston,2025-03-14T01:01:57.940937
+CUST00070,Jody,Meza,colleenbaker@example.org,France,East Glenn,2023-08-22T08:17:14.612175
+CUST00071,Aaron,Hayes,ocarter@example.com,United States,Jacquelinemouth,2023-08-18T04:55:00.760802
+CUST00072,Jesus,Baker,ronaldstephens@example.net,Australia,West Margaret,2023-08-18T10:48:05.811256
+CUST00073,Gabriel,Parker,scott74@example.net,Netherlands,Benderhaven,2024-12-29T19:35:30.637065
+CUST00074,Samuel,George,mnavarro@example.com,Canada,North Jeremyshire,2025-02-18T01:20:23.427543
+CUST00075,Andrew,Hubbard,barbara27@example.net,Germany,Moonburgh,2026-04-30T19:29:08.805499
+CUST00076,Ryan,Olsen,harrisonricky@example.com,France,Port Eugenechester,2025-06-11T14:37:04.837171
+CUST00077,Keith,Landry,gibsonleonard@example.com,Australia,Port Richardhaven,2025-10-29T11:43:34.607434
+CUST00078,Aaron,Booth,mgutierrez@example.net,France,Cindyfort,2025-03-30T20:35:12.244246
+CUST00079,Kathleen,Harris,sarakim@example.net,Spain,Martinezbury,2025-06-28T18:38:46.604409
+CUST00080,Lance,Smith,hdavis@example.com,Netherlands,Lake Marilynfort,2026-02-21T07:03:38.444449
+CUST00081,Kelly,Thornton,edavenport@example.org,Spain,Arnoldfurt,2023-12-23T11:37:37.383101
+CUST00082,Carol,Francis,michellehill@example.com,United Kingdom,Sarahhaven,2024-03-14T01:52:56.041788
+CUST00083,Aaron,Barber,cgrimes@example.net,Canada,Reedside,2025-08-24T08:32:25.087409
+CUST00084,Nicholas,Cantu,tinaallen@example.com,United Kingdom,Port Kimberly,2023-07-19T20:42:41.084920
+CUST00085,Julie,Thornton,qhughes@example.net,France,South Tammie,2023-10-15T21:22:06.290733
+CUST00086,Tammy,Rivera,sawyerscott@example.net,Canada,Smithberg,2024-08-13T06:28:12.624559
+CUST00087,Diana,Moore,qharrington@example.com,Netherlands,Santosmouth,2025-11-27T16:54:18.875312
+CUST00088,Michele,James,courtney78@example.org,Netherlands,East Crystalport,2026-05-01T07:46:27.598554
+CUST00089,Julie,Hamilton,hodgesjane@example.org,Australia,Jacksonport,2026-01-21T03:27:44.697690
+CUST00090,Brandon,Flynn,michael62@example.org,France,Knightburgh,2023-12-01T12:03:05.795491
+CUST00091,Christian,Pitts,tyleraguilar@example.org,United Kingdom,Littlemouth,2024-03-01T10:53:41.741834
+CUST00092,Albert,Ballard,erica21@example.com,Spain,Vanessaport,2025-04-14T06:38:46.735155
+CUST00093,Roger,Wright,james67@example.org,Germany,South Ashley,2025-02-04T22:27:28.467871
+CUST00094,Victoria,Phillips,khill@example.net,United States,New Julieport,2025-09-07T01:40:35.274044
+CUST00095,Jerry,Pham,danaoliver@example.net,Germany,Lake Colton,2025-04-02T01:00:14.162835
+CUST00096,Benjamin,Kramer,rileyjessica@example.org,United Kingdom,Markchester,2023-12-07T12:43:38.939506
+CUST00097,David,Ryan,alyssa42@example.com,United Kingdom,Coffeyport,2025-08-06T23:17:23.179669
+CUST00098,Matthew,Wilson,taylortammy@example.net,Netherlands,Coffeyside,2024-06-27T03:51:47.080376
+CUST00099,Krystal,Smith,gibsonemily@example.net,Germany,Brendastad,2023-09-26T19:31:50.934290
+CUST00100,Jesus,Johnson,rose31@example.net,Netherlands,Blankenshipport,2025-04-25T06:06:40.776797
+CUST00101,Darryl,Williams,torrestravis@example.org,Netherlands,New Derek,2024-09-28T19:18:20.204717
+CUST00102,Ellen,Paul,umatthews@example.org,Spain,Penafort,2025-03-20T11:02:28.621063
+CUST00103,Sheila,Ramirez,jeff73@example.com,Canada,Lake Michaelstad,2023-08-06T21:02:19.704702
+CUST00104,Joshua,Donaldson,ndavis@example.net,United States,North Kristinbury,2026-04-22T03:40:52.867866
+CUST00105,Kristin,Harris,brendali@example.org,Germany,Kimtown,2024-03-24T20:16:06.940917
+CUST00106,Tracey,Huerta,lauren10@example.org,Canada,West Kristybury,2025-02-19T21:35:17.837968
+CUST00107,Alfred,Baker,judyfox@example.net,Australia,South Shanestad,2024-12-01T07:33:47.414234
+CUST00108,Daniel,Gordon,acostaregina@example.net,Germany,Stephentown,2023-08-07T04:04:50.522964
+CUST00109,Timothy,Morales,henryrenee@example.org,Canada,West Charleneland,2023-10-15T19:58:11.315803
+CUST00110,Claudia,Richards,oscar98@example.com,Netherlands,Wagnerchester,2023-09-17T01:02:51.023603
+CUST00111,Jacqueline,Farrell,russellbeasley@example.com,United Kingdom,Mariafurt,2024-08-19T16:12:57.542625
+CUST00112,Cody,Simmons,nicholas27@example.org,Spain,Port Christopherchester,2023-09-14T06:11:15.907194
+CUST00113,Joanne,Cain,willisanna@example.com,United States,South Michaelchester,2025-12-14T11:46:05.446733
+CUST00114,Jennifer,Schmitt,michael98@example.org,Canada,Lake Timothy,2025-11-22T07:19:05.699739
+CUST00115,Michael,Hawkins,farmeraudrey@example.com,United Kingdom,New Sarahview,2023-07-04T04:52:33.028021
+CUST00116,Joshua,Farmer,michael22@example.net,Germany,Jonestown,2023-09-09T03:14:39.025885
+CUST00117,Alyssa,Bennett,xpeterson@example.com,Canada,Kimberlyshire,2025-02-27T18:06:52.511645
+CUST00118,Nicole,Moore,craigjoseph@example.net,France,Tuckermouth,2024-08-17T18:01:32.366983
+CUST00119,Jason,Hunt,russell49@example.com,United Kingdom,Brandonfurt,2026-04-17T11:46:28.091589
+CUST00120,Brian,Harris,katrinaduran@example.com,Australia,Davidfort,2025-08-07T10:55:17.836104
+CUST00121,Gregory,James,vincentwhitaker@example.com,United Kingdom,South Michelleton,2024-09-10T05:38:34.649259
+CUST00122,Steve,Miller,barbara96@example.net,United States,Robertsfurt,2023-06-25T13:47:10.580045
+CUST00123,Mark,Solis,xcollier@example.org,Australia,Richardbury,2024-09-09T15:45:09.868336
+CUST00124,Richard,Miller,julie35@example.org,Spain,New Cynthiahaven,2024-11-27T19:31:08.064604
+CUST00125,Rebecca,Bailey,joelthomas@example.org,United States,New Eric,2025-08-20T09:23:06.753531
+CUST00126,Charles,Bean,kmarshall@example.net,Germany,Maldonadoshire,2025-04-18T14:18:51.526877
+CUST00127,Valerie,Morris,edward17@example.com,Australia,Laurashire,2023-08-02T05:03:44.168781
+CUST00128,William,Collins,xjohnson@example.com,Canada,Lake Michelleland,2025-03-19T18:34:26.310274
+CUST00129,William,Ford,colelisa@example.net,France,West Cassidy,2024-11-18T15:56:38.706245
+CUST00130,Susan,Hayes,toni18@example.net,United States,North John,2024-09-11T20:59:53.435567
+CUST00131,Scott,Mills,michaelhardin@example.com,France,Schroederton,2025-09-21T10:36:37.563721
+CUST00132,Deborah,Jones,grantpaul@example.com,Germany,West Christopher,2025-05-10T13:43:29.528144
+CUST00133,Sabrina,Collins,tanderson@example.org,Germany,Angelicamouth,2025-10-16T23:23:13.666534
+CUST00134,Elizabeth,Calderon,lucasrodney@example.com,Spain,West Kyleborough,2024-06-01T12:54:57.955350
+CUST00135,Katie,Lee,ericphillips@example.org,Germany,Lake Matthewberg,2025-02-28T20:16:18.028253
+CUST00136,Eric,White,jenniferwilliams@example.com,United Kingdom,South Cheryl,2025-08-13T04:27:06.198498
+CUST00137,Kristen,Young,kylestokes@example.com,United Kingdom,West Erika,2025-01-31T06:06:31.549394
+CUST00138,Scott,Hammond,ashaw@example.org,Spain,Port Cassandra,2025-12-19T17:20:48.379624
+CUST00139,Brett,Castillo,angela18@example.org,United Kingdom,Christopherburgh,2024-03-20T01:35:30.024363
+CUST00140,Rebecca,Hernandez,odavis@example.com,Canada,Sarahchester,2023-07-30T02:29:54.734371
+CUST00141,Wayne,Young,brooksanthony@example.org,Netherlands,Laceyberg,2023-07-14T04:01:25.198739
+CUST00142,Samantha,Kennedy,katherineharrison@example.net,France,North Andrewborough,2025-11-09T04:25:01.928048
+CUST00143,Ana,Acosta,srodriguez@example.org,France,Davidbury,2024-08-23T18:19:39.741443
+CUST00144,Laura,Bryant,copelandvincent@example.net,Canada,Lake Zacharybury,2025-07-08T02:44:30.071684
+CUST00145,Kelly,Smith,john62@example.net,Netherlands,New Theresaland,2026-03-15T09:48:18.169515
+CUST00146,Amy,Hartman,myerstheodore@example.net,Australia,Zavalaview,2025-08-07T18:39:28.559756
+CUST00147,Michael,Jones,jessicafuller@example.net,Spain,Dennisstad,2025-01-05T05:52:43.202093
+CUST00148,Lisa,Thompson,epollard@example.net,Spain,Port Dennis,2025-07-05T10:49:01.750714
+CUST00149,Sherry,Johnson,bradleygonzalez@example.org,Germany,Sarahhaven,2024-07-31T17:49:13.430061
+CUST00150,Lisa,Kennedy,mullinsjames@example.com,France,Port Dianaview,2023-10-14T00:03:51.699928
+CUST00151,Micheal,Preston,ykline@example.com,France,South Heather,2024-06-28T20:04:02.748755
+CUST00152,Laura,Adams,acostachristian@example.net,Germany,New Kelly,2023-09-20T16:30:27.493126
+CUST00153,Mark,Phillips,bmorrison@example.org,Australia,Bellton,2025-07-16T22:16:03.105681
+CUST00154,Rhonda,Mendez,yhill@example.org,United States,Lake Danastad,2024-12-01T03:40:37.222149
+CUST00155,Kara,Moore,thomascathy@example.com,France,East Carlosstad,2024-06-23T07:09:32.666754
+CUST00156,Stacy,Johnson,erikarush@example.com,France,Hinesshire,2023-10-28T02:11:54.779217
+CUST00157,Michael,Edwards,john10@example.net,United States,South April,2026-01-31T22:15:52.867108
+CUST00158,David,Hampton,nlewis@example.com,Germany,Gonzalezberg,2025-11-28T05:18:32.553876
+CUST00159,Shannon,Roach,zosborn@example.net,United States,Elizabethland,2025-01-09T11:45:47.745705
+CUST00160,Kelly,Evans,jenniferho@example.net,France,Port Michael,2024-01-28T07:49:22.090873
+CUST00161,Tracie,Conner,kristyjohnson@example.net,Germany,Tannerside,2023-10-19T15:31:38.282000
+CUST00162,Nicole,Jones,ukey@example.com,United States,Hammondshire,2023-08-20T22:40:29.483589
+CUST00163,Teresa,Day,howens@example.com,Australia,Port Kimberly,2025-04-15T04:31:14.505361
+CUST00164,Hunter,Burch,dshaw@example.org,Germany,West Fred,2024-05-12T05:06:59.758245
+CUST00165,Jenna,Reed,meghan43@example.net,France,Davidport,2025-03-19T03:44:10.811144
+CUST00166,Clarence,Davidson,georgeweber@example.net,Canada,Meganshire,2023-07-17T05:58:13.648094
+CUST00167,Michelle,Miller,debra96@example.net,Spain,South Pamelaside,2024-04-07T01:20:43.066683
+CUST00168,Sue,Webb,eevans@example.net,France,East Scottfort,2024-10-10T07:29:57.607606
+CUST00169,Matthew,Thomas,jessica56@example.org,United Kingdom,Zacharyville,2024-05-08T10:26:54.964334
+CUST00170,Steven,Adams,donaldwilliams@example.com,Spain,Wrightburgh,2025-10-17T06:52:58.347844
+CUST00171,Sarah,Griffith,kathrynjimenez@example.net,France,Jimenezport,2024-11-14T09:42:39.454685
+CUST00172,Christopher,Long,nlevy@example.net,Spain,Brandonport,2024-11-11T18:22:47.410186
+CUST00173,Nicole,Pena,amitchell@example.org,Netherlands,Andersonview,2025-07-17T16:00:34.779683
+CUST00174,Kathryn,Diaz,jwilliams@example.org,France,Angelaland,2024-07-19T02:05:03.467044
+CUST00175,Shannon,Pierce,andersoncolin@example.com,Germany,Angelastad,2025-08-15T22:17:16.167132
+CUST00176,James,Hicks,williamsderrick@example.com,Germany,Stoneberg,2025-03-10T10:49:38.484086
+CUST00177,Zachary,Murphy,francisco94@example.net,Netherlands,Williamhaven,2024-12-21T16:08:13.581995
+CUST00178,Jeanne,Evans,richardsonemily@example.com,Australia,Lauratown,2025-02-28T11:39:23.774938
+CUST00179,Joseph,Rios,jennifersilva@example.org,Netherlands,Hernandezbury,2023-07-06T23:49:12.294181
+CUST00180,Stacy,Rodriguez,alexanderrobert@example.com,Netherlands,South Warren,2025-03-16T00:16:39.986151
+CUST00181,Thomas,Charles,thorntonapril@example.net,Spain,Whitneyfort,2024-12-14T08:36:30.445860
+CUST00182,Lee,Thompson,amy49@example.com,United States,East Joshua,2024-04-16T11:07:43.851905
+CUST00183,Shelly,Hendrix,janet75@example.com,Germany,Annview,2024-04-05T01:12:05.977291
+CUST00184,Ashley,Daniels,xcardenas@example.org,United States,Bobbyland,2024-06-06T11:22:07.694507
+CUST00185,Scott,Scott,ilewis@example.com,Netherlands,Derrickshire,2024-02-13T08:30:59.838873
+CUST00186,Brent,Stein,danawilliams@example.com,Australia,Jenniferville,2025-05-29T07:22:13.428378
+CUST00187,Derrick,Oconnell,richarddonovan@example.com,Germany,Santosport,2024-05-10T14:55:42.478611
+CUST00188,Debbie,Velez,pearsonjesse@example.net,France,East Robertburgh,2026-02-22T15:31:56.392723
+CUST00189,Benjamin,Huff,vlopez@example.com,France,North Kennethville,2026-02-16T19:40:54.430163
+CUST00190,Matthew,Gibson,ismall@example.net,France,Nelsonville,2024-05-20T18:19:55.050369
+CUST00191,Jessica,Wong,alexisrogers@example.com,Spain,East Cheryl,2025-04-14T01:12:02.522695
+CUST00192,Richard,Patterson,christopher12@example.org,United Kingdom,Morrisbury,2023-06-10T15:01:41.259706
+CUST00193,Patrick,Griffin,stephanie49@example.net,Netherlands,West Desireebury,2023-08-08T13:18:13.145391
+CUST00194,David,Parker,tparks@example.com,United Kingdom,Lake Sabrinaport,2024-06-29T01:06:19.958973
+CUST00195,Jeffrey,Bernard,vhernandez@example.net,Canada,Robertside,2026-01-31T03:11:37.741084
+CUST00196,Katherine,Pham,kathleenbecker@example.net,Spain,New Seanstad,2023-08-25T13:59:14.695258
+CUST00197,Anne,Brown,ashleyhernandez@example.com,France,Wilsonborough,2025-07-06T09:08:37.608919
+CUST00198,Tracy,Nolan,dstokes@example.org,Germany,Bryantton,2025-01-18T20:50:40.719226
+CUST00199,Emily,Parker,fosterlisa@example.net,Spain,New Charles,2024-08-27T21:21:31.924702
+CUST00200,Isabella,Weaver,michaelcesar@example.com,Germany,West Robertberg,2025-08-27T12:07:16.680408
