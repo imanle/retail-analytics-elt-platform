@@ -27,7 +27,14 @@ MINIO_BUCKET = os.environ.get("MINIO_BUCKET", "retail-data")
 
 RAW_DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "raw_data")
 
-SOURCE_FOLDERS = ["orders", "order_items", "customers", "products", "shipments", "payments"]
+SOURCE_FOLDERS = [
+    "orders",
+    "order_items",
+    "customers",
+    "products",
+    "shipments",
+    "payments",
+]
 
 
 def get_s3_client():
@@ -90,10 +97,15 @@ def main(folder: str = None):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Upload raw data files to MinIO")
-    parser.add_argument("--folder", type=str, default=None,
-                        help="Upload only this folder (e.g. orders). Default: all folders.")
+    parser.add_argument(
+        "--folder",
+        type=str,
+        default=None,
+        help="Upload only this folder (e.g. orders). Default: all folders.",
+    )
     args = parser.parse_args()
 
     from dotenv import load_dotenv
+
     load_dotenv()
     main(folder=args.folder)
